@@ -1,0 +1,47 @@
+REAGÊNCIA — A REGÊNCIA DA SUA EDIÇÃO
+Apresentação interativa em HTML
+
+PARA ABRIR
+Extraia o pacote ZIP e abra index.html em um navegador atualizado.
+A versão publicada é acessada pelo navegador, sem instalação.
+Mantenha index.html, style.css, app.js, case.css, case.js e a pasta assets juntos.
+Para compartilhar, envie o ZIP completo, que inclui as imagens e os vídeos.
+
+PARA APRESENTAR
+Use os botões inferiores ou as setas esquerda e direita do teclado.
+O índice permite entrar diretamente em qualquer parte da apresentação.
+F ativa ou encerra a tela cheia. M abre o índice.
+Home vai ao início e End vai ao encerramento.
+Esc fecha imagens ampliadas, documentos e o índice.
+
+Clique nas capturas para ampliá-las. A opção Tamanho real permite
+inspecionar a imagem original com rolagem.
+Os vídeos têm controles próprios de reprodução, volume e tela cheia.
+No celular, role o conteúdo de cada página e avance pelos botões inferiores.
+
+CONTEÚDO
+27 páginas com apresentação do editor, preparação dos recursos,
+edição manual, edição híbrida, Agência plena e criação por conversa.
+Os quatro percursos terminam com os respectivos vídeos reais.
+O vídeo curto de abertura está disponível na primeira página.
+
+Atualização de 20 de outubro de 2026.
+
+PERCURSO 4: CRIAÇÃO POR CONVERSA — CAMINHO DA LUZ
+Cinco páginas ilustram a criação de imagens e do projeto no ChatGPT,
+o fluxo até a finalização, três mosaicos em vídeo e o resultado publicado.
+A página 6 também leva diretamente ao novo caso.
+A publicação no GitHub Pages e os links do YouTube requerem conexão.
+As mídias desta apresentação são cópias otimizadas. Os originais foram preservados.
+
+Os três primeiros percursos comparam o mesmo roteiro. O quarto usa outro
+projeto prático, com música pronta, imagens dirigidas pelo usuário e
+montagem JSON criada pelo ChatGPT seguindo os mapas e regras do editor.
+A vinculação dos metadados já estava prevista no pedido.
+
+
+VERSÃO ESSENCIAL
+Abra essencial/index.html para a apresentação de 9 páginas sobre o editor e suas possibilidades.
+Os quatro casos abrem resumos ilustrados, com opções de explorar os percursos completos.
+Mantenha também essencial/product.css junto dos arquivos desta versão.
+A versão completa permanece em index.html. As duas compartilham a pasta assets.
