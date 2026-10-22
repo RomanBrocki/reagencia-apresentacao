@@ -1,0 +1,4 @@
+(()=>{'use strict';const data=JSON.parse(document.getElementById('post-data').textContent),status=document.querySelector('.copy-status');let timer;
+async function copyText(text){try{await navigator.clipboard.writeText(text)}catch{const box=document.createElement('textarea');box.value=text;box.style.cssText='position:fixed;top:0;left:0;width:1px;height:1px';document.body.append(box);box.select();const ok=document.execCommand('copy');box.remove();if(!ok)throw Error('copy')}}
+document.addEventListener('click',async e=>{const b=e.target.closest('[data-copy]');if(!b)return;try{await copyText(b.dataset.copy==='full'?data.full:data.blocks[Number(b.dataset.copy)]);status.textContent=b.dataset.copy==='full'?'Texto copiado, com a posição das duas imagens.':'Bloco copiado.'}catch{status.textContent='Selecione o texto na página e copie.'}clearTimeout(timer);status.classList.add('visible');timer=setTimeout(()=>status.classList.remove('visible'),3200)});
+})();

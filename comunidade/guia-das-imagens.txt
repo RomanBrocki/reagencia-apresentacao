@@ -1,0 +1,13 @@
+ORDEM DAS IMAGENS
+
+1. 01-reagencia-editor.png
+Legenda opcional: Reagência: edição manual e operações por IA no mesmo projeto.
+Descrição para acessibilidade: Reagência: um editor de vídeo com edição manual e operações por IA. Captura real mostra a prévia, os recursos e a linha do tempo.
+Origem: Adaptada da abertura da apresentação; captura real do editor.
+
+2. 02-reagencia-possibilidades.png
+Legenda opcional: Conexões, Agência integrada e criação de projetos por conversa.
+Descrição para acessibilidade: Três possibilidades além da edição manual: conexões para gerar recursos, Agência para executar pedidos e mapas e regras para preparar um projeto por conversa.
+Origem: Adaptada da página 3: os diferenciais do Reagência.
+
+Se a comunidade só aceitar anexos ao final, use texto-sem-marcacoes.txt e anexe as imagens na ordem 1 e 2.
