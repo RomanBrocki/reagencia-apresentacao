@@ -17,6 +17,48 @@
 
 .closing-art img{height:auto;aspect-ratio:auto;object-fit:contain}
 
+/* Real recordings of the integrated agent, with viewing and execution times separated. */
+.recording-label{display:block;color:var(--mint);font-size:9px;letter-spacing:.12em;line-height:1.5;margin-bottom:12px}
+.agent-layout{grid-template-columns:1.1fr 1fr;gap:4vw}
+.agent-recording{width:100%;max-width:600px;justify-self:end}
+.agent-recording>video{border:1px solid var(--line);aspect-ratio:1268/720;max-height:none}
+.recording-times{display:flex;justify-content:space-between;gap:24px;border-bottom:1px solid var(--line);padding:17px 0 16px}
+.recording-times>div{display:flex;flex-direction:column;gap:6px}
+.recording-times>div:last-child{text-align:right}
+.recording-times b{font-size:23px;font-weight:500;letter-spacing:-.03em;color:var(--mint)}
+.recording-times span{font-size:12px;color:var(--muted);line-height:1.5}
+.recording-links{display:flex;justify-content:space-between;gap:20px;margin-top:9px}
+.recording-links .text-link{font-size:12px}
+.recording-links .text-link:last-child{color:var(--gold)}
+.recording-summary{align-items:start}
+.recording-summary .recording-times{border-bottom:0;padding-top:12px;padding-bottom:0}
+.recorded-prompt{margin:25px 0;padding:22px 25px;border:1px solid #9be8be40;border-left:3px solid var(--mint);border-radius:5px;background:#183326}
+.recorded-prompt p{font-size:17px;line-height:1.75}
+.recorded-prompt p:last-child{margin-bottom:0}
+@media(max-height:800px) and (min-width:901px){
+ .agent-layout{grid-template-columns:1.25fr 1fr}
+ .recording-times{padding:13px 0 12px}
+ .recording-times b{font-size:20px}.recording-times span{font-size:11px}
+ .recording-label{margin-bottom:9px;font-size:8px}
+ .recording-links{margin-top:6px;gap:12px}.recording-links .text-link{font-size:11px}
+ .recording-summary .case-steps li{padding-bottom:13px}
+ .recording-summary .case-steps b{font-size:15px}
+ .recording-summary .case-steps p{font-size:12px}
+}
+@media(max-width:900px){
+ .agent-layout{grid-template-columns:1fr}
+ .agent-recording{max-width:none;justify-self:stretch}
+ .agent-recording>video{max-height:none}
+ .recording-times b{font-size:25px}.recording-times span{font-size:13px}
+ .recording-links .text-link{font-size:13px}
+}
+@media(max-width:540px){
+ .recording-times{gap:16px}.recording-times b{font-size:22px}.recording-times span{font-size:12px}
+ .recording-links{flex-wrap:wrap;gap:2px 20px;margin-top:11px}
+ .recorded-prompt{padding:18px;margin:20px 0}.recorded-prompt p{font-size:16px}
+ .recording-summary .recording-times{gap:12px}.recording-summary .recording-times b{font-size:22px}
+}
+
 /* Make the outcome readable before the file format, and show concrete work saved. */
 .project-file b{font-size:32px;line-height:1.08;letter-spacing:-.04em}
 .project-file small{font-size:12px}

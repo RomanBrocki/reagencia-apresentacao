@@ -21,8 +21,8 @@ function go(target,push=true){
 function renderDetail(key){
  const t=$('detail-'+key);if(!t)return;
  currentDetail=key;$('detail-title').textContent=t.dataset.title;$('detail-content').replaceChildren(t.content.cloneNode(true));
- $('detail-dialog').dataset.case=String(['manual','hibrido','plena','conversa','mosaicos'].includes(key));
- $('detail-dialog').querySelector('.dialog-return button').textContent=detailHistory.length?'← Voltar ao resumo':'← Continuar a apresentação';
+ $('detail-dialog').dataset.case=String(['manual','hibrido','plena','conversa','mosaicos','agencia-espiral'].includes(key));
+ $('detail-dialog').querySelector('.dialog-return button').textContent=detailHistory.length?'← Voltar à demonstração':'← Continuar a apresentação';
  $('detail-dialog').scrollTop=0;
 }
 function openDetail(key){
