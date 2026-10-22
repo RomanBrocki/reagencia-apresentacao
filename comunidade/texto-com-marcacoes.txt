@@ -2,7 +2,7 @@ Fala, galera!
 
 Nos últimos meses desenvolvi o Reagência, um editor de vídeos. Foi meu maior projeto até hoje e uma experiência intensa de desenvolvimento com IA.
 
-A base é a de um editor: organizar cenas, som e legendas, ajustar os detalhes e exportar o vídeo. O que acrescentei foram outras formas de trabalhar nesse mesmo projeto.
+Parti de uma estrutura inicial do OpenCut, ainda muito limitada para o que eu queria fazer. Precisei construir e amadurecer recursos fundamentais do editor, como transições, transformações, efeitos e máscaras, além de desenvolver as conexões e a Agência integrada.
 
 [INSERIR IMAGEM 1 — 01-reagencia-editor.png]
 
