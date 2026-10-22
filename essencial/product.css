@@ -17,6 +17,19 @@
 
 .closing-art img{height:auto;aspect-ratio:auto;object-fit:contain}
 
+/* Resource illustrations show voice and subtitles as recognizable outputs. */
+.connected-resources .resource-art{height:clamp(124px,17vh,170px)}
+.narration-art{background:#081a16;border:1px solid #9be8be25}
+.narration-art img{object-fit:contain;object-position:center}
+.subtitle-preview{background:#050708}
+.subtitle-preview>img{object-position:center 38%}
+.subtitle-preview:after{content:'';position:absolute;inset:35% 0 0;background:linear-gradient(transparent,#000c);pointer-events:none}
+.subtitle-badge{position:absolute;right:10px;top:9px;z-index:1;padding:3px 5px;background:#000b;border:1px solid #ffffff80;border-radius:3px;font-size:10px;font-weight:600;color:#fff}
+.subtitle-lines{position:absolute;z-index:1;inset:auto 8px 10px;display:flex;flex-direction:column;align-items:center;color:#fff;font-size:clamp(13px,1.2vw,18px);font-weight:600;line-height:1.4;letter-spacing:0;text-align:center}
+.subtitle-lines>span{background:#000d;padding:1px 7px;border-radius:2px;box-decoration-break:clone}
+@media(max-width:900px){.connected-resources .resource-art{height:140px}.subtitle-lines{font-size:14px}}
+@media(max-width:540px){.connected-resources .resource-art{height:155px}.subtitle-lines{font-size:16px;bottom:12px}}
+
 /* Both real uses are visible and playable in the main presentation. */
 .agent-dual .canvas{gap:14px}
 .agent-dual .section-heading{display:block}

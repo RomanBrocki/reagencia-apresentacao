@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 180" role="img" aria-labelledby="title desc">
+<title id="title">Narração: texto transformado em voz</title><desc id="desc">Microfone iluminado ao lado de uma onda de fala.</desc>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#102c23"/><stop offset="1" stop-color="#060f13"/></linearGradient><radialGradient id="light"><stop stop-color="#9be8be" stop-opacity=".18"/><stop offset="1" stop-color="#9be8be" stop-opacity="0"/></radialGradient><linearGradient id="metal" x2="1"><stop stop-color="#5c9e88"/><stop offset=".45" stop-color="#e0f9ea"/><stop offset="1" stop-color="#62927f"/></linearGradient></defs>
+<rect width="480" height="180" fill="url(#bg)"/><ellipse cx="91" cy="94" rx="118" ry="104" fill="url(#light)"/>
+<circle cx="85" cy="85" r="61" fill="none" stroke="#a3dfbf" stroke-opacity=".12"/>
+<circle cx="85" cy="85" r="48" fill="#152e29" stroke="#a3dfbf" stroke-opacity=".25"/>
+<rect x="68" y="39" width="34" height="66" rx="17" fill="url(#metal)"/>
+<g stroke="#173c32" stroke-opacity=".6" stroke-width="2" stroke-linecap="round"><path d="M76 50h18M75 57h20M75 64h20M75 71h20M75 78h20M76 85h18"/></g>
+<path d="M57 80v10a28 28 0 0 0 56 0V80M85 118v19M69 139h32" fill="none" stroke="url(#metal)" stroke-width="4" stroke-linecap="round"/>
+<path d="M153 104H433" stroke="#86c4a6" stroke-opacity=".16"/>
+<path d="M159.0 102.5v3 M164.4 101.5v5 M169.8 102.0v4 M175.2 100.0v8 M180.6 96.5v15 M186.0 99.5v9 M191.4 93.0v22 M196.8 88.5v31 M202.2 94.5v19 M207.6 86.5v35 M213.0 92.5v23 M218.4 97.0v14 M223.8 101.0v6 M229.2 102.5v3 M234.6 102.0v4 M240.0 100.5v7 M245.4 95.5v17 M250.8 89.5v29 M256.2 84.5v39 M261.6 90.5v27 M267.0 96.0v16 M272.4 92.0v24 M277.8 87.0v34 M283.2 83.5v41 M288.6 89.0v30 M294.0 96.0v16 M299.4 100.5v7 M304.8 102.0v4 M310.2 102.5v3 M315.6 101.5v5 M321.0 99.5v9 M326.4 94.5v19 M331.8 90.5v27 M337.2 86.0v36 M342.6 92.0v24 M348.0 97.0v14 M353.4 93.5v21 M358.8 88.0v32 M364.2 91.5v25 M369.6 97.5v13 M375.0 101.5v5 M380.4 102.5v3 M385.8 102.0v4 M391.2 99.5v9 M396.6 96.0v16 M402.0 92.0v24 M407.4 97.0v14 M412.8 100.0v8 M418.2 102.0v4 M423.6 103.0v2" fill="none" stroke="#9be8be" stroke-width="2.8" stroke-linecap="round"/>
+<text x="154" y="44" fill="#a9c7ba" font-family="Segoe UI,Arial,sans-serif" font-size="10" letter-spacing="3">TEXTO EM VOZ</text>
+<text x="154" y="71" fill="#eef8f2" font-family="Segoe UI,Arial,sans-serif" font-size="21" font-weight="500">Uma ideia merece ser contada.</text>
+<path d="M154 145h50m8 0h92m8 0h41" stroke="#a9c7ba" stroke-opacity=".25" stroke-width="3" stroke-linecap="round"/>
+</svg>
