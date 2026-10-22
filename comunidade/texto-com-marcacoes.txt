@@ -29,7 +29,9 @@ O Codex, da OpenAI, tornou possível colocar esses conhecimentos em prática. N�
 2. Fazer um agente executar tarefas complexas exige mais do que conectar um modelo.
 Ele precisa entender as ferramentas, o estado do projeto e os limites da operação. Quanto mais possibilidades, mais difícil foi manter a execução consistente.
 
-3. Trabalhar com IA também é um exercício de gestão.
-Dividir tarefas, escolher modelos, organizar contexto e revisar resultados passaram a fazer parte do trabalho. E custo entra nessa conta: um modelo mais barato pode sair caro pelo retrabalho; um mais capaz pode ser desperdício numa tarefa simples. Encontrar esse equilíbrio foi um aprendizado constante.
+3. Trabalhar com IA exige gestão e curadoria humana constante.
+Dividir tarefas e escolher modelos adequados é só parte do trabalho. Um modelo mais barato pode sair caro pelo retrabalho; um mais capaz pode ser desperdício numa tarefa simples. Também vi a IA gastar horas insistindo num caminho ruim ou buscando uma solução que já estava à vista.
+
+Os melhores resultados vieram com acompanhamento constante, passos sólidos, escopo definido, direção clara e critérios de sucesso para cada etapa. Foi preciso conferir o avanço e redirecionar o trabalho ao longo da execução.
 
 Se quiserem saber mais, estou à disposição.
