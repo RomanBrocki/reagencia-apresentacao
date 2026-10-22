@@ -218,3 +218,33 @@
  .concrete-value .value-visual{width:84px;height:66px}
  .concrete-value .music-visual{padding:10px 7px}.concrete-value .music-visual>span{font-size:10px!important}
 }
+
+/* Demonstration of connection setup, kept outside the nine-slide sequence. */
+.connection-watch{display:flex;align-items:center;gap:12px;flex-shrink:0;border:1px solid #9be8be60;border-radius:8px;background:#133326;padding:12px 16px;text-align:left;color:var(--mint)}
+.connection-watch:hover{background:#1b4935;border-color:var(--mint)}
+.connection-watch>span{font-size:22px;line-height:1}.connection-watch b{font-size:12px}.connection-watch small{font-size:11px;border-left:1px solid var(--line);padding-left:12px;white-space:nowrap}
+#detail-dialog[data-detail="conexoes"]{width:min(1050px,94vw)}
+#detail-dialog[data-detail="conexoes"] .dialog-header{padding:18px 28px}
+#detail-dialog[data-detail="conexoes"] .dialog-header h2{font-size:30px}
+#detail-dialog[data-detail="conexoes"] .dialog-header .eyebrow{margin-bottom:7px}
+#detail-dialog[data-detail="conexoes"] #detail-content{padding:20px 28px}
+#detail-dialog[data-detail="conexoes"] .dialog-return{padding:10px 28px 15px}
+.connection-demo-layout{display:grid;grid-template-columns:1.1fr 1fr;gap:35px;align-items:center}
+.connection-demo-media{min-width:0;text-align:center}
+.connection-demo-media video{aspect-ratio:1000/1040;max-height:min(55svh,550px);width:auto;max-width:100%;margin:auto;border:1px solid var(--line)}
+.connection-demo-media>p{font-size:11px;margin:9px 0 0}
+.connection-demo-copy .eyebrow{font-size:9px;margin-bottom:10px}
+.connection-demo-copy h3{font-size:35px;margin-bottom:12px}
+.connection-demo-copy>p{font-size:15px;line-height:1.5;margin:0 0 15px}
+.connection-chapters{display:flex;flex-direction:column;margin:15px 0}
+.connection-chapters button{display:flex;align-items:center;gap:16px;text-align:left;border-top:1px solid var(--line);padding:10px 12px;border-radius:4px}
+.connection-chapters button:last-child{border-bottom:1px solid var(--line)}
+.connection-chapters button:hover,.connection-chapters button[aria-current="true"]{background:#204b36}
+.connection-chapters button>span{font-size:11px;font-variant-numeric:tabular-nums;color:var(--mint)}
+.connection-chapters b{display:block;font-size:15px;margin-bottom:3px}.connection-chapters small{font-size:12px;color:var(--muted);display:block;line-height:1.35}
+.connection-chapters i{font-style:normal;color:var(--mint);margin-left:auto}
+.connection-demo-copy>.connection-demo-note{font-size:11px;line-height:1.5;color:var(--muted);margin:0 0 8px}
+.connection-demo-copy>.text-link{font-size:12px}
+@media(max-height:800px) and (min-width:901px){.connection-demo-copy h3{font-size:28px}.connection-demo-copy h3 br{display:none}.connection-demo-copy>p{font-size:14px;margin-bottom:10px}.connection-chapters{margin:10px 0}.connection-chapters button{padding:8px 10px}.connection-chapters b{font-size:14px}.connection-demo-copy .eyebrow{margin-bottom:8px}.connection-demo-copy>.connection-demo-note{font-size:11px}}
+@media(max-width:900px){.connection-demo-layout{grid-template-columns:1fr;gap:24px}.connection-demo-media video{width:min(100%,460px);max-height:none}.connection-demo-copy h3 br{display:none}.connection-demo-copy>p{font-size:16px}.connection-chapters button{padding:14px 12px}.connection-chapters b{font-size:16px}.connection-chapters small{font-size:13px}}
+@media(max-width:540px){.connection-watch{width:100%;padding:13px 14px;gap:10px}.connection-watch b{font-size:12px}.connection-watch small{margin-left:auto}#detail-dialog[data-detail="conexoes"] .dialog-header{padding:18px}#detail-dialog[data-detail="conexoes"] .dialog-header h2{font-size:25px}#detail-dialog[data-detail="conexoes"] #detail-content{padding:18px}#detail-dialog[data-detail="conexoes"] .dialog-return{padding:12px 18px 18px}.connection-demo-copy h3{font-size:31px}}

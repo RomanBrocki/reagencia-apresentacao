@@ -21,6 +21,8 @@ function go(target,push=true){
 function renderDetail(key){
  const t=$('detail-'+key);if(!t)return;
  currentDetail=key;$('detail-title').textContent=t.dataset.title;$('detail-content').replaceChildren(t.content.cloneNode(true));
+ $('detail-dialog').dataset.detail=key;
+ if(key==='conexoes')$('connections-demo').addEventListener('timeupdate',updateConnectionChapter);
  $('detail-dialog').dataset.case=String(['manual','hibrido','plena','conversa','mosaicos','agencia-espiral'].includes(key));
  $('detail-dialog').querySelector('.dialog-return button').textContent=detailHistory.length?'← Voltar à demonstração':'← Continuar a apresentação';
  $('detail-dialog').scrollTop=0;
@@ -28,18 +30,19 @@ function renderDetail(key){
 function openDetail(key){
  if(!$('detail-'+key))return;pause();
  if($('detail-dialog').open){detailHistory.push({key:currentDetail,scroll:$('detail-dialog').scrollTop});renderDetail(key);$('detail-dialog').querySelector('.dialog-header>button').focus({preventScroll:true})}
- else{detailHistory=[];returnFocus=document.activeElement;renderDetail(key);$('detail-dialog').showModal()}
+ else{detailHistory=[];returnFocus=document.activeElement;renderDetail(key);$('detail-dialog').showModal();$('detail-dialog').querySelector('.dialog-header>button').focus({preventScroll:true});$('detail-dialog').scrollTop=0}
 }
 function backDetail(){
  pause();if(detailHistory.length){const prior=detailHistory.pop();renderDetail(prior.key);$('detail-dialog').scrollTop=prior.scroll;$('detail-dialog').querySelector('.dialog-header>button').focus({preventScroll:true})}
  else $('detail-dialog').close();
 }
 document.addEventListener('click',e=>{
- const el=e.target.closest('[data-go],[data-detail],[data-close],[data-image],[data-mosaic],#play-mosaic,a[href^="#"]');if(!el)return;
+ const el=e.target.closest('[data-go],[data-detail],[data-close],[data-image],[data-mosaic],[data-video-seek],#play-mosaic,a[href^="#"]');if(!el)return;
  if(el.dataset.go){e.preventDefault();go(el.dataset.go)}
  else if(el.dataset.detail)openDetail(el.dataset.detail);
  else if(el.hasAttribute('data-close')){const dialog=el.closest('dialog');if(dialog.id==='detail-dialog'&&el.closest('.dialog-return'))backDetail();else dialog.close()}
  else if(el.dataset.image){pause();$('large-image').src=el.dataset.image;$('large-image').alt=el.dataset.caption||'';$('image-caption').textContent=el.dataset.caption||'';$('image-dialog').showModal()}
+ else if(el.hasAttribute('data-video-seek'))seekConnection(el);
  else if(el.hasAttribute('data-mosaic'))selectMosaic(el);
  else if(el.id==='play-mosaic'){const v=$('proof-video');v.currentTime=0;v.play().catch(()=>v.focus())}
  else if(el.hash&&steps.some(s=>s.id===el.hash.slice(1))){e.preventDefault();go(el.hash.slice(1))}
@@ -65,6 +68,26 @@ function selectMosaic(button){
  const i=Number(button.dataset.mosaic),m=mosaics[i],v=$('proof-video');v.pause();v.poster=`../assets/caminho-da-luz/frame-${m.frame}.jpg`;v.src=`../assets/caminho-da-luz/mosaico-${i+1}.mp4`;v.load();v.setAttribute('aria-label',`Mosaico ${i+1} de Caminho da Luz`);
  $('request-title').innerHTML=m.title;$('request-copy').textContent=m.text;$('request-panel').setAttribute('aria-labelledby',button.id);
  document.querySelectorAll('[data-mosaic]').forEach(b=>{b.setAttribute('aria-selected',String(b===button));b.tabIndex=b===button?0:-1});
+}
+function updateConnectionChapter(){
+ const v=$('connections-demo');if(!v)return;
+ const buttons=[...document.querySelectorAll('#detail-content [data-video-seek]')];
+ const active=buttons.filter(b=>Number(b.dataset.videoSeek)<=v.currentTime+.05).pop();
+ buttons.forEach(b=>{if(b===active)b.setAttribute('aria-current','true');else b.removeAttribute('aria-current')});
+}
+async function seekConnection(button){
+ const v=$('connections-demo');if(!v)return;
+ try{
+  if(v.readyState<1)await new Promise((resolve,reject)=>{
+   const loaded=()=>{cleanup();resolve()},failed=()=>{cleanup();reject(new Error('Video indisponível'))};
+   const cleanup=()=>{v.removeEventListener('loadedmetadata',loaded);v.removeEventListener('error',failed)};
+   v.addEventListener('loadedmetadata',loaded);v.addEventListener('error',failed);v.load();
+  });
+  if(!v.isConnected||!$('detail-dialog').open)return;
+  v.currentTime=Number(button.dataset.videoSeek);updateConnectionChapter();
+  await v.play();
+  if(matchMedia('(max-width:900px)').matches)$('detail-dialog').scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
+ }catch{v.focus();$('announcement').textContent='Use os controles do vídeo para reproduzir.'}
 }
 const initial=location.hash.slice(1);go(steps.some(s=>s.id===initial)||aliases[initial]?initial:0,false);
 })();
