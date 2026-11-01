@@ -37,7 +37,7 @@ function backDetail(){
  else $('detail-dialog').close();
 }
 document.addEventListener('click',e=>{
- const el=e.target.closest('[data-go],[data-detail],[data-close],[data-image],[data-mosaic],[data-video-seek],#play-mosaic,a[href^="#"]');if(!el)return;
+ const el=e.target.closest('[data-go],[data-detail]:not(dialog),[data-close],[data-image],[data-mosaic],[data-video-seek],#play-mosaic,a[href^="#"]');if(!el)return;
  if(el.dataset.go){e.preventDefault();go(el.dataset.go)}
  else if(el.dataset.detail)openDetail(el.dataset.detail);
  else if(el.hasAttribute('data-close')){const dialog=el.closest('dialog');if(dialog.id==='detail-dialog'&&el.closest('.dialog-return'))backDetail();else dialog.close()}

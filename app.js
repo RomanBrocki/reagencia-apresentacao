@@ -107,7 +107,8 @@
   const tools = [
     ['26-painel-transformar','Enquadramento, animação e cor','Recorte e enquadramento definem o quadro. Transformações e keyframes animam zoom, posição, rotação e opacidade. Contraste, saturação e sombras compõem a correção de cor.','Painel Transformar de um clipe selecionado.'],
     ['27-painel-mascaras','O que aparece em cada camada','Máscaras delimitam a área visível de uma camada com formas e recortes. O painel apresenta as opções disponíveis para a imagem selecionada.','Opções de máscaras de uma imagem selecionada.'],
-    ['28-painel-efeitos','Opções para o acabamento','Os efeitos oferecem opções como desfoque, cor, distorção e textura. O painel reúne as categorias e os efeitos disponíveis para a imagem selecionada.','Categorias e opções de efeitos de uma imagem selecionada.']
+    ['28-painel-efeitos','Opções para o acabamento','Os efeitos oferecem opções como desfoque, cor, distorção e textura. O painel reúne as categorias e os efeitos disponíveis para a imagem selecionada.','Categorias e opções de efeitos de uma imagem selecionada.'],
+    ['30-silencios-limpar','Trate as pausas da gravação','Silencie os intervalos detectados sem mudar a duração. Ou retire as pausas, fazendo as faixas escolhidas acompanharem os cortes.','Limpeza dos silêncios: intervalos marcados na onda, com a duração preservada.']
   ];
   function changeEvidence(container, file, caption) {
     const src = 'assets/screenshots/' + file + '.png';
@@ -118,6 +119,10 @@
   }
   document.querySelectorAll('[data-tool]').forEach(b => b.addEventListener('click', () => {
     const [file,title,text,caption] = tools[Number(b.dataset.tool)];
+    const silence = b.dataset.tool === '3';
+    byId('tool-panel').classList.toggle('silence-selected', silence);
+    byId('silence-tool-controls').hidden = !silence;
+    document.querySelectorAll('[data-silence-view]').forEach(el => el.setAttribute('aria-pressed', String(el.dataset.silenceView === 'gap')));
     selectTabs(b.closest('[role="tablist"]'), b);
     byId('tool-panel').setAttribute('aria-labelledby', b.id);
     changeEvidence(byId('tool-panel'), file, caption);
